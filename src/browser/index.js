@@ -20,8 +20,26 @@ import IsolatedBlockEditor from '../index';
  */
 const settings = {
 	iso: {
-		moreMenu: false,
-	},
+		moreMenu: {
+			editor: true,
+			fullscreen: true,
+			preview: true,
+			topToolbar: true,
+		},
+		toolbar: {
+			inserter: true,
+			inspector: true,
+			navigation: true,
+			documentInspector: true,
+			toc: true,
+			undo: true,
+			selectorTool: true,
+		},
+		sidebar: {
+			inserter: true,
+			inspector: true
+		}
+	}
 };
 
 /**
