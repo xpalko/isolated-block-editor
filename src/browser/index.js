@@ -39,6 +39,20 @@ const settings = {
 			inserter: true,
 			inspector: true
 		}
+	},
+	editor: {
+		hasUploadPermissions: true,
+		allowedMimeTypes: [],
+		allowedBlockTypes: [],
+		hasFixedToolbar: true,
+		template: null,
+		templateLock: null,
+		reusableBlocks: [],
+		styles: [],
+		defaultEditorStyles: [],
+		bodyPlaceholder: '',
+		__experimentalBlockPatterns: window.wp.__experimentalBlockPatterns ?? [],
+		__experimentalBlockPatternCategories: window.wp.__experimentalBlockPatternCategories ?? []
 	}
 };
 

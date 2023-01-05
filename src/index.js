@@ -3,6 +3,12 @@
  * WordPress dependencies
  */
 
+import { setLocaleData } from "@wordpress/i18n";
+
+if (window.wp?.localeData) {
+	setLocaleData(window.wp.localeData)
+}
+
 import '@wordpress/editor';
 import { StrictMode, useEffect } from '@wordpress/element';
 import { SlotFillProvider } from '@wordpress/components';
@@ -125,6 +131,8 @@ import './style.scss';
  * @property {object[]} styles
  * @property {object[]} defaultEditorStyles
  * @property {string} bodyPlaceholder
+ * @property {object[]} __experimentalBlockPatterns
+ * @property {object[]} __experimentalBlockPatternCategories
  */
 
 /**

@@ -122,28 +122,9 @@ export default function applyDefaultSettings( settings ) {
 			__experimentalCanUserUseUnfilteredHTML: false,
 
 			// Default to no patterns, reusable blocks
-			__experimentalBlockPatterns: [
-				{
-					"categories": [
-						"text"
-					],
-					"content": "<!-- wp:group {\"align\":\"full\",\"style\":{\"color\":{\"gradient\":\"linear-gradient(135deg,rgb(238,238,238) 21%,rgb(169,184,195) 100%)\"}}} -->\n<div class=\"wp-block-group alignfull has-background\" style=\"background:linear-gradient(135deg,rgb(238,238,238) 21%,rgb(169,184,195) 100%)\"><div class=\"wp-block-group__inner-container\"><!-- wp:heading {\"level\":1} -->\n<h1>Featured Articles</h1>\n<!-- /wp:heading -->\n\n<!-- wp:columns -->\n<div class=\"wp-block-columns\"><!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:image {\"sizeSlug\":\"large\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"https://picsum.photos/200/300\" alt=\"\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:heading -->\n<h2>Article 1</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Eaedem res maneant alio modo. At hoc in eo M. Non potes, nisi retexueris illa. Scrupulum, inquam, abeunti; Quantum Aristoxeni ingenium consumptum videmus in musicis?</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button {\"backgroundColor\":\"red\"} -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-red-background-color has-background\">Read more</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:image {\"sizeSlug\":\"large\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"https://picsum.photos/200/300\" alt=\"\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:heading -->\n<h2>Article 2</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Eaedem res maneant alio modo. At hoc in eo M. Non potes, nisi retexueris illa. Scrupulum, inquam, abeunti; Quantum Aristoxeni ingenium consumptum videmus in musicis?</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button {\"backgroundColor\":\"red\"} -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-red-background-color has-background\">Read more</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div>\n<!-- /wp:column -->\n\n<!-- wp:column -->\n<div class=\"wp-block-column\"><!-- wp:image {\"sizeSlug\":\"large\"} -->\n<figure class=\"wp-block-image size-large\"><img src=\"https://picsum.photos/200/300\" alt=\"\"/></figure>\n<!-- /wp:image -->\n\n<!-- wp:heading -->\n<h2>Article 3</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Eaedem res maneant alio modo. At hoc in eo M. Non potes, nisi retexueris illa. Scrupulum, inquam, abeunti; Quantum Aristoxeni ingenium consumptum videmus in musicis?</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\"><!-- wp:button {\"backgroundColor\":\"red\"} -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link has-red-background-color has-background\">Read more</a></div>\n<!-- /wp:button --></div>\n<!-- /wp:buttons --></div>\n<!-- /wp:column --></div>\n<!-- /wp:columns --></div></div>\n<!-- /wp:group -->",
-					"description": "An example block pattern with a heading.",
-					"name": "example/myplugin",
-					"title": "Example block pattern"
-				}
-			],
+			__experimentalBlockPatterns: ( editor?.__experimentalBlockPatterns ?? [] ),
 			// Default to no category patterns, reusable blocks
-			__experimentalBlockPatternCategories: [
-				{
-					"label": "Text",
-					"name": "text"
-				},
-				{
-					"label": "Demo",
-					"name": "demo"
-				}
-			],
+			__experimentalBlockPatternCategories: ( editor?.__experimentalBlockPatternCategories ?? [] ),
 			// @ts-ignore */}
 			reusableBlocks: [],
 
