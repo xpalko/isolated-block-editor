@@ -118,3 +118,9 @@ html.interface-interface-skeleton__html-container {
 #media-search-input {
 	box-sizing: border-box;
 }
+
+.components-menu-items__item-icon, .components-panel__arrow {
+	min-width: 20px;
+	min-height: 20px;
+	max-width: 24px;
+}
