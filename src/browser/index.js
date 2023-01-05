@@ -21,38 +21,38 @@ import IsolatedBlockEditor from '../index';
 const settings = {
 	iso: {
 		moreMenu: {
-			editor: true,
-			fullscreen: true,
-			preview: true,
-			topToolbar: true,
+			editor: window.wp.settings?.iso?.moreMenu?.editor ?? true,
+			fullscreen: window.wp.settings?.iso?.moreMenu?.fullscreen ?? true,
+			preview: window.wp.settings?.iso?.moreMenu?.preview ?? true,
+			topToolbar: window.wp.settings?.iso?.moreMenu?.topToolbar ?? true,
 		},
 		toolbar: {
-			inserter: true,
-			inspector: true,
-			navigation: true,
-			documentInspector: true,
-			toc: true,
-			undo: true,
-			selectorTool: true,
+			inserter: window.wp.settings?.iso?.toolbar?.inserter ?? true,
+			inspector: window.wp.settings?.iso?.toolbar?.inspector ?? true,
+			navigation: window.wp.settings?.iso?.toolbar?.navigation ?? true,
+			documentInspector: window.wp.settings?.iso?.toolbar?.documentInspector ?? true,
+			toc: window.wp.settings?.iso?.toolbar?.toc ?? true,
+			undo: window.wp.settings?.iso?.toolbar?.undo ?? true,
+			selectorTool: window.wp.settings?.iso?.toolbar?.selectorTool ?? true,
 		},
 		sidebar: {
-			inserter: true,
-			inspector: true
+			inserter: window.wp.settings?.iso?.sidebar?.inserter ?? true,
+			inspector: window.wp.settings?.iso?.sidebar?.inspector ?? true
 		}
 	},
 	editor: {
-		hasUploadPermissions: true,
-		allowedMimeTypes: [],
-		allowedBlockTypes: [],
-		hasFixedToolbar: true,
-		template: null,
-		templateLock: null,
-		reusableBlocks: [],
-		styles: [],
-		defaultEditorStyles: [],
-		bodyPlaceholder: '',
-		__experimentalBlockPatterns: window.wp.__experimentalBlockPatterns ?? [],
-		__experimentalBlockPatternCategories: window.wp.__experimentalBlockPatternCategories ?? []
+		hasUploadPermissions: window.wp.settings?.editor?.hasUploadPermissions ?? true,
+		allowedMimeTypes: window.wp.settings?.editor?.allowedMimeTypes ?? [],
+		allowedBlockTypes: window.wp.settings?.editor?.allowedBlockTypes ?? [],
+		hasFixedToolbar: window.wp.settings?.editor?.hasFixedToolbar ?? true,
+		template: window.wp.settings?.editor?.template ?? null,
+		templateLock: window.wp.settings?.editor?.templateLock ?? null,
+		reusableBlocks: window.wp.settings?.editor?.reusableBlocks ?? [],
+		styles: window.wp.settings?.editor?.styles ?? [],
+		defaultEditorStyles: window.wp.settings?.editor?.defaultEditorStyles ?? [],
+		bodyPlaceholder: window.wp.settings?.editor?.bodyPlaceholder ?? '',
+		__experimentalBlockPatterns: window.wp.settings?.editor?.__experimentalBlockPatterns ?? [],
+		__experimentalBlockPatternCategories: window.wp.settings?.editor?.__experimentalBlockPatternCategories ?? []
 	}
 };
 
