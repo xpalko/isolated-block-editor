@@ -3,6 +3,7 @@
  * WordPress dependencies
  */
 
+import { I18nLoaded } from "./components/i18n-loaded";
 import '@wordpress/editor';
 import { StrictMode, useEffect } from '@wordpress/element';
 import { SlotFillProvider } from '@wordpress/components';
@@ -143,6 +144,8 @@ export function initializeEditor() {
 	if ( window.isoInitialised ) {
 		return;
 	}
+
+	I18nLoaded();
 
 	// Register all core blocks
 	registerCoreBlocks();
