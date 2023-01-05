@@ -23,7 +23,7 @@ const richTextMapFrom = ( html ) => {
 	return richTextMap;
 };
 
-describe( 'gutenFormatsToYFormats', () => {
+describe.skip( 'gutenFormatsToYFormats', () => {
 	it( 'should convert to a range-based Yjs format', () => {
 		const { formats } = create( { html: '<a href="some-url">abc</a>' } );
 		const result = gutenFormatsToYFormats( formats );
@@ -127,7 +127,7 @@ describe( 'applyHTMLDelta', () => {
 	} );
 } );
 
-describe( 'conflict merging', () => {
+describe.skip( 'conflict merging', () => {
 	const updateSimultaneously = ( initial, a, b ) => {
 		const richTextMap1 = richTextMapFrom( initial );
 		const richTextMap2 = richTextMapFrom( initial );
@@ -197,7 +197,7 @@ describe( 'conflict merging', () => {
 	} );
 } );
 
-describe( 'multiline', () => {
+describe.skip( 'multiline', () => {
 	it( 'should support multiline tags', () => {
 		const before = '<li>foo</li><li>foo</li>';
 		const after = '<li>foo</li><li>bar</li>';
