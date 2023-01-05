@@ -2,6 +2,12 @@
  * WordPress dependencies
  */
 
+import { setLocaleData } from "@wordpress/i18n";
+
+if (window.wp?.localeData) {
+	setLocaleData(window.wp.localeData)
+}
+
 import { render, unmountComponentAtNode } from '@wordpress/element';
 
 /**

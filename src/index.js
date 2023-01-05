@@ -3,12 +3,6 @@
  * WordPress dependencies
  */
 
-import { setLocaleData } from "@wordpress/i18n";
-
-if (window.wp?.localeData) {
-	setLocaleData(window.wp.localeData)
-}
-
 import '@wordpress/editor';
 import { StrictMode, useEffect } from '@wordpress/element';
 import { SlotFillProvider } from '@wordpress/components';
