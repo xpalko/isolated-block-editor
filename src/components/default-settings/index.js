@@ -3,6 +3,7 @@
  */
 
 import { __ } from '@wordpress/i18n';
+import { MediaUpload } from "@wordpress/media-utils";
 
 /** @typedef {import('../../index').BlockEditorSettings} BlockEditorSettings */
 
@@ -98,6 +99,7 @@ export default function applyDefaultSettings( settings ) {
 		},
 		editor: {
 			alignWide: true,
+			mediaUpload: MediaUpload,
 			disableCustomColors: false,
 			disableCustomFontSizes: false,
 			disablePostFormats: true,
@@ -106,7 +108,22 @@ export default function applyDefaultSettings( settings ) {
 			autosaveInterval: 60,
 			maxUploadFileSize: 0,
 			// @ts-ignore */}
-			allowedMimeTypes: [],
+			allowedMimeTypes: {
+				"jpg|jpeg|jpe": "image/jpeg",
+				png: "image/png",
+				gif: "image/gif",
+				"mp3|m4a|m4b": "audio/mpeg",
+				"mov|qt": "video/quicktime",
+				avi: "video/avi",
+				wmv: "video/x-ms-wmv",
+				"mid|midi": "audio/midi",
+				pdf: "application/pdf",
+				"mp4|m4v": "video/mp4",
+				webm: "video/webm",
+				ogv: "video/ogg",
+				"txt|asc|c|cc|h|srt": "text/plain",
+				webp: "image/webp"
+			},
 			styles: [
 				{
 					baseURL: '',
