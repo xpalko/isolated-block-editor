@@ -4,14 +4,11 @@ import ReactDOM from 'react-dom';
 import { addFilter } from "@wordpress/hooks";
 
 class MediaIframe extends Component  {
+
     render() {
         return (
-            <div id="myModal" className="modal">
-                <div className="modal-content">
-                    <iframe
-                        src={ window.wp.settings.editor.mediaLibraryIframeSrc }/>
-                </div>
-            </div>
+            <iframe
+                src={ window.wp.settings.editor.mediaLibraryIframeSrc }/>
         );
     }
 }
