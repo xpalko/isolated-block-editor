@@ -127,6 +127,7 @@ import './style.scss';
  * @property {object[]} styles
  * @property {object[]} defaultEditorStyles
  * @property {string} bodyPlaceholder
+ * @property {string} mediaLibraryIframeSrc
  * @property {object[]} __experimentalBlockPatterns
  * @property {object[]} __experimentalBlockPatternCategories
  */
@@ -147,7 +148,6 @@ export function initializeEditor() {
 	}
 
 	I18nLoaded();
-	initMediaLibrary();
 
 	// Register all core blocks
 	registerCoreBlocks();
@@ -263,6 +263,8 @@ function IsolatedBlockEditor( props ) {
 		} ),
 		[]
 	);
+
+	initMediaLibrary(settings);
 
 	useEffect( () => {
 		__experimentalOnSelection?.( editorSelection );

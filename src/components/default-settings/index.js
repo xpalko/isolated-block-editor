@@ -136,6 +136,8 @@ export default function applyDefaultSettings( settings ) {
 			codeEditingEnabled: false,
 			// @ts-ignore */}
 			allowedBlockTypes: true,
+			mediaLibraryIframeSrc: ( editor?.mediaLibraryIframeSrc ?? '' ),
+
 			__experimentalCanUserUseUnfilteredHTML: false,
 
 			// Default to no patterns, reusable blocks

@@ -51,6 +51,7 @@ const settings = {
 		styles: window.wp.settings?.editor?.styles ?? [],
 		defaultEditorStyles: window.wp.settings?.editor?.defaultEditorStyles ?? [],
 		bodyPlaceholder: window.wp.settings?.editor?.bodyPlaceholder ?? '',
+		mediaLibraryIframeSrc: window.wp.settings?.editor?.mediaLibraryIframeSrc ?? '',
 		__experimentalBlockPatterns: window.wp.settings?.editor?.__experimentalBlockPatterns ?? [],
 		__experimentalBlockPatternCategories: window.wp.settings?.editor?.__experimentalBlockPatternCategories ?? []
 	}
