@@ -17,7 +17,7 @@ class MediaIframe extends Component  {
 
 class MediaUpload extends Component {
     openModal = () => {
-        ReactDOM.render(<MediaIframe src={ this.props.settings.editor.mediaLibraryIframeSrc } />, document.getElementById('container'))
+        ReactDOM.render(<MediaIframe src={ this.props.editor.mediaLibraryIframeSrc } />, document.getElementById('container'))
     }
 
     render() {
