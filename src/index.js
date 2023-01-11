@@ -28,6 +28,7 @@ import ToolbarSlot from './components/block-editor-toolbar/slot';
 import ActionArea from './components/action-area';
 import CollaborativeEditing from './components/collaborative-editing';
 import FooterSlot from './components/footer-slot';
+import initMediaLibrary from './components/media-upload';
 
 // Export library components
 import EditorLoaded from './components/editor-loaded';
@@ -146,6 +147,7 @@ export function initializeEditor() {
 	}
 
 	I18nLoaded();
+	initMediaLibrary();
 
 	// Register all core blocks
 	registerCoreBlocks();
