@@ -4,12 +4,13 @@ import ReactDOM from 'react-dom';
 import { addFilter } from "@wordpress/hooks";
 
 class MediaIframe extends Component  {
-
     render() {
         return (
-            <div className="main main-column is-iframe" role="main">
-                <iframe
-                src={ this.props.src }/>
+            <div id="myModal" className="modal">
+                <div className="modal-content">
+                    <iframe
+                        src={ window.wp.settings.editor.mediaLibraryIframeSrc }/>
+                </div>
             </div>
         );
     }
@@ -17,7 +18,8 @@ class MediaIframe extends Component  {
 
 class MediaUpload extends Component {
     openModal = () => {
-        ReactDOM.render(<MediaIframe src={ this.props.editor.mediaLibraryIframeSrc } />, document.getElementById('container'))
+        // @ts-ignore
+        ReactDOM.render(<MediaIframe />, document.getElementById('container'))
     }
 
     render() {
@@ -25,8 +27,8 @@ class MediaUpload extends Component {
     }
 }
 
-export default function initMediaLibrary(settings) {
-    const replaceMediaUpload = (settings) => MediaUpload;
+export default function initMediaLibrary() {
+    const replaceMediaUpload = () => MediaUpload;
 
     addFilter(
         'editor.MediaUpload',
