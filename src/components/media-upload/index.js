@@ -1,9 +1,21 @@
 import { Component } from 'react';
+import * as React from 'react';
+import ReactDOM from 'react-dom';
 import { addFilter } from "@wordpress/hooks";
+
+class MediaIframe extends Component  {
+    render() {
+        return (
+            <div className="main main-column is-iframe" role="main">
+                <iframe/>
+            </div>
+        );
+    }
+}
 
 class MediaUpload extends Component {
     openModal = () => {
-        console.log('Open Media Library');
+        ReactDOM.render(<MediaIframe />, document.getElementById('container'))
     }
 
     render() {
